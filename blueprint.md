@@ -1,28 +1,44 @@
-# Song of Soil Website Blueprint
+# Project Blueprint
 
 ## Overview
 
-A website for Song of Soil, a forest-farm near Kanha National Park. The website will showcase the farm's story, methods, products, and provide a way for customers to get in touch.
+This is a Next.js application for a farm-to-table business called "Song of Soil". The application showcases the farm's purpose, what's in season, a map of the farm locations, and a journal. It also includes a newsletter signup form.
 
-## Design and Features
+## Current State & Features
 
-*   **Theme:** Modern, clean, and earthy, reflecting the farm's values.
-*   **Typography:** A combination of a classic serif font (Playfair Display) for headings and a clean sans-serif (Inter) for body text.
-*   **Color Palette:** Earthy tones, with greens, browns, and creams.
-*   **Pages:**
-    *   **Home:** A visually engaging landing page with a brief introduction to the farm.
-    *   **Our Farm:** Details about the farm's location, philosophy, and a seasonal calendar.
-    *   **Methods:** An explanation of their regenerative farming practices.
-    *   **Journal:** A blog with updates and stories from the farm.
-    *   **Market:** Information on where to buy their produce.
-    *   **Contact:** A form for inquiries.
-*   **Features:**
-    *   **Contentlayer:** For managing blog content.
-    *   **Mapbox:** To display the farm's location.
-    *   **Server Actions:** For the contact form.
+### Design & Styling
 
-## Current Plan
+*   **Layout:** The application uses a modern, clean layout with ample whitespace.
+*   **Typography:** A clear and legible font is used, with a good hierarchy of text sizes.
+*   **Color Palette:** The color palette is earthy and natural, reflecting the farm's brand.
+*   **Components:** Reusable components are used for consistency and maintainability.
 
-1.  **Implement Contact Form:** Create a Server Action to handle the contact form submission.
-2.  **Add confirmation:** show a confirmation message to the user after the form is submitted.
-3.  **Final Polish:** Review and refine the design and content.
+### Features
+
+*   **Home Page:** A comprehensive home page with the following sections:
+    *   Hero section with a welcoming message.
+    *   "Our Purpose" section highlighting the farm's values.
+    *   "What's Growing This Month" section with a seasonal calendar.
+    *   "Find Us" section with a map of the farm locations.
+    *   "From the Journal" section with the latest journal entries.
+    *   "Stay in Touch" section with a newsletter signup form.
+*   **Journal:** A dedicated page for journal entries, with a list of all entries.
+*   **Individual Journal Pages:** Each journal entry has its own page.
+*   **Responsive Design:** The application is responsive and works well on both desktop and mobile devices.
+
+## Firebase Integration
+
+### Implemented
+
+*   **Firebase Configuration:** I have created a configuration file to store the Firebase project credentials in `lib/firebase.ts`.
+*   **Firebase Admin SDK:** I have initialized the Firebase Admin SDK for server-side operations.
+*   **Firestore Integration:** I have integrated Firestore to read journal entries, replacing the static file-based system. The previous file-based logic is commented out in `lib/journals.ts` for reference.
+*   **Database Seeding:** I have created a script at `scripts/seed.js` to populate the Firestore database with the existing journal entries from the markdown files.
+
+## Google Maps Integration
+
+I have replaced Mapbox with Google Maps for displaying the farm locations. This includes:
+
+*   **Installed Google Maps Library:** I have installed the `@vis.gl/react-google-maps` package.
+*   **Updated Map Component:** The `FarmMap.tsx` component has been updated to use the `AdvancedMarker` component, which is the recommended replacement for the deprecated `Marker`.
+*   **API Key Configuration:** A `.env.local` file has been created for you to store your Google Maps API key.

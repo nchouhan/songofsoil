@@ -1,0 +1,10 @@
+---
+title: First Post
+summary: This is the first post
+date: 2025-01-01
+image: /images/farm.jpg
+---
+
+## Hello World
+
+This is the first post.

@@ -1,15 +1,13 @@
 'use client'
 
 import { useFormState } from 'react-dom'
-import { submitContactForm } from '@/app/actions'
+import { subscribeToNewsletter } from '@/app/actions'
 import { SubmitButton } from '@/components/SubmitButton'
 
-const initialState = {
-  message: null,
-}
+const initialState = null;
 
 export function ContactForm() {
-  const [state, formAction] = useFormState(submitContactForm, initialState)
+  const [state, formAction] = useFormState(subscribeToNewsletter, initialState)
 
   return (
     <form action={formAction} className="mt-8 max-w-lg">
@@ -42,7 +40,7 @@ export function ContactForm() {
       <div className="mt-6">
         <SubmitButton />
       </div>
-      {state.message && <p className="mt-4 text-green-600">{state.message}</p>}
+      {state?.message && <p className="mt-4 text-green-600">{state.message}</p>}
     </form>
   )
 }

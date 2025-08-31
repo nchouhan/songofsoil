@@ -1,20 +1,20 @@
 'use client'
-    import { Map } from "react-map-gl"
-    import "mapbox-gl/dist/mapbox-gl.css"
+import { APIProvider, Map, AdvancedMarker } from '@vis.gl/react-google-maps';
 
-    const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN
+export function FarmMap() {
+  const position = { lat: 22.25, lng: 80.52 };
 
-    export function FarmMap(){
-      return (
+  return (
+    <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}>
+      <div style={{ height: "300px", width: "100%" }}>
         <Map
-          mapboxAccessToken={MAPBOX_TOKEN}
-          initialViewState={{
-            longitude: 80.52,
-            latitude: 22.25,
-            zoom: 10
-          }}
-          style={{width: "100%", height: 300}}
-          mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
-        />
-      )
-    }
+          defaultCenter={position}
+          defaultZoom={10}
+          mapId="a2b2e7a3f3a2a74"
+        >
+          <AdvancedMarker position={position} />
+        </Map>
+      </div>
+    </APIProvider>
+  );
+}

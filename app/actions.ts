@@ -3,18 +3,12 @@
 import { z } from 'zod'
 
 const schema = z.object({
-  firstName: z.string(),
-  lastName: z.string(),
   email: z.string().email(),
-  message: z.string(),
 })
 
-export async function submitContactForm(prevState: any, formData: FormData) {
+export async function subscribeToNewsletter(prevState: { errors?: { email?: string[] }; message?: string } | null, formData: FormData) {
   const validatedFields = schema.safeParse({
-    firstName: formData.get('first-name'),
-    lastName: formData.get('last-name'),
     email: formData.get('email'),
-    message: formData.get('message'),
   })
 
   if (!validatedFields.success) {
@@ -23,8 +17,7 @@ export async function submitContactForm(prevState: any, formData: FormData) {
     }
   }
 
-  // In a real application, you would save the data to a database or send an email.
-  console.log(validatedFields.data)
+  // TODO: Save email to database or newsletter service
 
-  return { message: 'Thank you for your message!' }
+  return { message: 'Thank you for subscribing!' }
 }
