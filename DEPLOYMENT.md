@@ -35,6 +35,11 @@ vercel
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 ```
 
+### Recommended for Production
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.vercel.app
+```
+
 ### Optional
 ```bash
 NODE_ENV=production
@@ -48,14 +53,16 @@ Your project is already configured for Vercel with:
 - ✅ `.gitignore` - Proper file exclusions
 - ✅ TypeScript support
 - ✅ Tailwind CSS optimization
+- ✅ Custom 404 and error pages
+- ✅ SEO metadata configuration
 
 ## Performance Features
 
 - **Image Optimization**: WebP and AVIF formats
 - **CSS Optimization**: Automatic CSS optimization
-- **Package Optimization**: Lucide React icons optimized
 - **Security Headers**: XSS protection, frame options
 - **Caching**: Static assets cached for 1 year
+- **Error Handling**: Custom 404 and error pages
 
 ## Deployment Regions
 
@@ -67,6 +74,7 @@ Configured for **Mumbai (BOM1)** region for optimal performance in India.
 2. **Check Core Web Vitals** in Vercel Analytics
 3. **Monitor performance** in Vercel Dashboard
 4. **Set up custom domain** if needed
+5. **Update NEXT_PUBLIC_SITE_URL** with your actual domain
 
 ## Troubleshooting
 
@@ -80,6 +88,7 @@ npm run build
 ### Environment Variables
 - Ensure all required env vars are set in Vercel Dashboard
 - Check for typos in variable names
+- Update NEXT_PUBLIC_SITE_URL after getting your Vercel domain
 
 ### Performance Issues
 - Use Vercel Analytics to identify bottlenecks

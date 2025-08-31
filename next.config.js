@@ -14,12 +14,6 @@ const nextConfig = {
     minimumCacheTTL: 60,
   },
   
-  // Experimental features for better performance
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react'],
-  },
-  
   // Headers for security and performance
   async headers() {
     return [
