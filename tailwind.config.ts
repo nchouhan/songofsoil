@@ -10,9 +10,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        kanha: {
-          green: "#3A583A",
-        },
+        kanhaGreen: "#2B5D3A",
+        terracotta: "#A4572D",
+        millet: "#E8DCC3",
+        monsoon: "#8AA6B1",
+        soil: "#1C1C1A",
       },
       fontFamily: {
         sans: ["var(--font-inter)"],

@@ -42,11 +42,11 @@ export default async function HomePage() {
                 "Local hands, local pride—skills and livelihoods rooted here.",
             },
           ].map((x) => (
-            <div key={x.title} className="rounded-2xl bg-gray-50 px-8 py-10">
-              <h3 className="text-base font-semibold leading-7 text-gray-900">
+            <div key={x.title} className="rounded-2xl bg-millet px-8 py-10 border border-monsoon hover:border-terracotta transition-colors">
+              <h3 className="text-base font-semibold leading-7 text-kanhaGreen">
                 {x.title}
               </h3>
-              <p className="mt-2 text-sm leading-6 text-gray-600">
+              <p className="mt-2 text-sm leading-6 text-soil">
                 {x.description}
               </p>
             </div>
@@ -54,7 +54,7 @@ export default async function HomePage() {
         </div>
       </Section>
       <Section
-        title="What’s growing this month"
+        title="What's growing this month"
         subtitle="Seasonal calendar (initial SKUs coming soon)"
       >
         <SeasonalCalendar />
@@ -62,11 +62,11 @@ export default async function HomePage() {
       <Section title="Find us" subtitle="Two farms near the Kanha landscape">
         <div className="grid lg:grid-cols-2 gap-6">
           <FarmMap />
-          <div className="rounded-2xl bg-gray-50 px-8 py-10 text-sm space-y-2">
+          <div className="rounded-2xl bg-millet px-8 py-10 text-sm space-y-2 border border-monsoon">
             <p>
               Nagjhola Farm (~35 acres):{" "}
               <a
-                className="text-blue-600 underline"
+                className="text-terracotta underline hover:text-kanhaGreen transition-colors"
                 href="https://maps.app.goo.gl/GP4dNrfvT1sVxxwj6"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -77,7 +77,7 @@ export default async function HomePage() {
             <p>
               Charegaon Farm (~10 acres):{" "}
               <a
-                className="text-blue-600 underline"
+                className="text-terracotta underline hover:text-kanhaGreen transition-colors"
                 href="https://maps.app.goo.gl/LfbKnvguRWsP64Lm6"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -100,12 +100,12 @@ export default async function HomePage() {
           </Link>
         </div>
       </Section>
-      <div className="bg-slate-50">
+      <div className="bg-terracotta">
         <Section title="Stay in touch">
           <div className="text-center">
-            <h2 className="text-3xl font-semibold">Stay in the Loop</h2>
-            <p className="text-xl text-slate-600 mt-4 max-w-3xl mx-auto">
-              Sign up for our newsletter to get the latest updates on what’s in
+            <h2 className="text-3xl font-semibold text-white">Stay in the Loop</h2>
+            <p className="text-xl text-millet mt-4 max-w-3xl mx-auto">
+              Sign up for our newsletter to get the latest updates on what's in
               season and where to find us.
             </p>
             <div className="mt-6">

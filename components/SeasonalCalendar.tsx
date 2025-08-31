@@ -53,11 +53,11 @@ export function SeasonalCalendar(){
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
       {seasonalCrops.map(({ month, crops }) => (
-        <div key={month} className="p-3 border rounded-lg bg-white hover:bg-gray-50 transition-colors">
-          <div className="font-semibold text-gray-900">{month}</div>
+        <div key={month} className="p-3 border border-monsoon rounded-lg bg-white hover:bg-millet transition-colors">
+          <div className="font-semibold text-kanhaGreen">{month}</div>
           <div className="mt-2 space-y-1">
             {crops.map((crop, index) => (
-              <div key={index} className="text-xs text-gray-600 leading-tight">
+              <div key={index} className="text-xs text-soil leading-tight">
                 {crop}
               </div>
             ))}

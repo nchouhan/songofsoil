@@ -29,9 +29,9 @@ export function FarmMap() {
 
   if (!apiKey) {
     return (
-      <div className="rounded-2xl bg-gray-50 px-8 py-10 text-center">
-        <p className="text-red-600 font-medium">Google Maps API Key Missing</p>
-        <p className="text-sm text-gray-600 mt-2">
+      <div className="rounded-2xl bg-millet px-8 py-10 text-center border border-monsoon">
+        <p className="text-terracotta font-medium">Google Maps API Key Missing</p>
+        <p className="text-sm text-soil mt-2">
           Please add NEXT_PUBLIC_GOOGLE_MAPS_API_KEY to your .env.local file
         </p>
       </div>
@@ -40,7 +40,7 @@ export function FarmMap() {
 
   return (
     <APIProvider apiKey={apiKey}>
-      <div style={{ height: "300px", width: "100%" }}>
+      <div style={{ height: "300px", width: "100%" }} className="rounded-2xl border border-monsoon overflow-hidden">
         <Map
           defaultCenter={centerPosition}
           defaultZoom={9}

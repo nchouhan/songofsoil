@@ -12,15 +12,15 @@ import Link from "next/link"
 
     export function SiteHeader(){
       return (
-        <header className="border-b py-3 font-medium">
+        <header className="border-b border-monsoon py-3 font-medium bg-white">
           <div className="container flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 font-semibold">
-              <Leaf className="w-5 h-5 text-green-700"/>
+            <Link href="/" className="flex items-center gap-2 font-semibold text-kanhaGreen hover:text-terracotta transition-colors">
+              <Leaf className="w-5 h-5 text-kanhaGreen"/>
               <span>SongOfSoil</span>
             </Link>
             <nav className="hidden lg:flex items-center gap-6 text-sm">
               {nav.map(n => (
-                <Link key={n.href} href={n.href} className="hover:underline">{n.label}</Link>
+                <Link key={n.href} href={n.href} className="text-soil hover:text-terracotta transition-colors">{n.label}</Link>
               ))}
             </nav>
           </div>

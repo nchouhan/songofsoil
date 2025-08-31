@@ -1,17 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root { --fg: #1C1C1A; }
+:root { 
+  --fg: #1C1C1A; 
+  --kanha-green: #2B5D3A;
+  --terracotta: #A4572D;
+  --millet: #E8DCC3;
+  --monsoon: #8AA6B1;
+  --soil: #1C1C1A;
+}
 html { scroll-behavior: smooth; }
-body { @apply bg-white text-[color:var(--fg)] antialiased; }
+body { @apply bg-millet text-soil antialiased; }
 .container { @apply mx-auto px-4 sm:px-6 lg:px-8; }
 .section { @apply py-12 sm:py-16; }
-.h1 { @apply text-4xl sm:text-5xl font-semibold font-serif; }
-.h2 { @apply text-2xl sm:text-3xl font-semibold font-serif; }
-.lead { @apply text-lg text-slate-700; }
+.h1 { @apply text-4xl sm:text-5xl font-semibold font-serif text-kanhaGreen; }
+.h2 { @apply text-2xl sm:text-3xl font-semibold font-serif text-kanhaGreen; }
+.lead { @apply text-lg text-soil; }
 .font-serif { font-family: var(--font-playfair); }
 .font-sans { font-family: var(--font-inter); }
-.card { @apply rounded-2xl shadow-soft bg-white border border-slate-100; }
+.card { @apply rounded-2xl shadow-soft bg-white border border-monsoon; }
 .btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium transition-colors; }
-.btn-primary { @apply bg-[color:theme(colors.kanha.green)] text-white hover:opacity-90; }
-.btn-ghost { @apply hover:bg-slate-100; }
+.btn-primary { @apply bg-terracotta text-white hover:bg-kanhaGreen; }
+.btn-ghost { @apply hover:bg-millet text-soil; }
