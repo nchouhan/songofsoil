@@ -9,10 +9,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        kanha: {
+          green: "#3A583A",
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+        serif: ["var(--font-playfair)"],
+      },
+      boxShadow: {
+        soft: "0px 4px 24px 0px rgba(0, 0, 0, 0.04)",
       },
     },
   },

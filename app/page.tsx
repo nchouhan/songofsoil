@@ -1,3 +1,4 @@
+// A small change to trigger a re-compile
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { FarmMap } from "@/components/FarmMap";

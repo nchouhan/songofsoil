@@ -22,7 +22,7 @@ export default async function PostPage({ params }: { params: { slug: string[] } 
         </div>
       </div>
     );
-  } catch (error) {
+  } catch {
     return <div>Post not found</div>;
   }
 }
