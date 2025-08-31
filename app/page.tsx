@@ -7,6 +7,7 @@ import Link from "next/link";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { getSortedJournalsData } from "@/lib/journals";
 import { JournalCard } from "@/components/JournalCard";
+import { Sprout, Flower2, Heart, TreePine, Users } from "lucide-react";
 
 export default async function HomePage() {
   const latestJournals = (await getSortedJournalsData()).slice(0, 3);
@@ -21,36 +22,53 @@ export default async function HomePage() {
               title: "Food",
               description:
                 "Fresh, seasonal produce grown with soil-first practices.",
+              icon: Sprout,
+              iconColor: "text-green-600"
             },
             {
               title: "Flowers",
-              description: "Field-grown blooms for homes and ceremonies.",
+              description:
+                "Field-grown blooms for homes and ceremonies.",
+              icon: Flower2,
+              iconColor: "text-pink-500"
             },
             {
               title: "Animals",
               description:
                 "Happy, free-range flocks & herds that complete the farm loop.",
+              icon: Heart,
+              iconColor: "text-red-500"
             },
             {
               title: "Trees",
               description:
                 "A living forest plan—shade today, ethical wood tomorrow.",
+              icon: TreePine,
+              iconColor: "text-green-700"
             },
             {
               title: "Community",
               description:
                 "Local hands, local pride—skills and livelihoods rooted here.",
+              icon: Users,
+              iconColor: "text-blue-600"
             },
-          ].map((x) => (
-            <div key={x.title} className="rounded-2xl bg-millet px-8 py-10 border border-monsoon hover:border-terracotta transition-colors">
-              <h3 className="text-base font-semibold leading-7 text-kanhaGreen">
-                {x.title}
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-soil">
-                {x.description}
-              </p>
-            </div>
-          ))}
+          ].map((x) => {
+            const IconComponent = x.icon;
+            return (
+              <div key={x.title} className="rounded-2xl bg-millet px-8 py-10 border border-monsoon hover:border-terracotta transition-colors group">
+                <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <IconComponent className={`w-8 h-8 ${x.iconColor}`} />
+                </div>
+                <h3 className="text-base font-semibold leading-7 text-kanhaGreen text-center">
+                  {x.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-soil text-center">
+                  {x.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </Section>
       <Section
