@@ -67,8 +67,9 @@ export default async function HomePage() {
               Nagjhola Farm (~35 acres):{" "}
               <a
                 className="text-blue-600 underline"
-                href="https://maps.app.goo.gl/E8q4LwbiyeeHvKYBA"
+                href="https://maps.app.goo.gl/GP4dNrfvT1sVxxwj6"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Google Maps
               </a>
@@ -77,8 +78,9 @@ export default async function HomePage() {
               Charegaon Farm (~10 acres):{" "}
               <a
                 className="text-blue-600 underline"
-                href="https://maps.app.goo.gl/Mk6qBshv18DEFAX38"
+                href="https://maps.app.goo.gl/LfbKnvguRWsP64Lm6"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Google Maps
               </a>
