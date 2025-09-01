@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export function Hero(){
       return (
         <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -29,12 +31,18 @@ export function Hero(){
               
               {/* Call to Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="px-8 py-4 bg-terracotta text-white font-semibold rounded-xl hover:bg-kanhaGreen transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <Link 
+                  href="/our-farm"
+                  className="px-8 py-4 bg-terracotta text-white font-semibold rounded-xl hover:bg-kanhaGreen transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
+                >
                   Explore Our Farm
-                </button>
-                <button className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/30 hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
-                  Watch Our Story
-                </button>
+                </Link>
+                <Link 
+                  href="/journal"
+                  className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/30 hover:bg-white/30 transition-all duration-300 transform hover:scale-105 inline-block"
+                >
+                  Read Our Story
+                </Link>
               </div>
             </div>
           </div>
