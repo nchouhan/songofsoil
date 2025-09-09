@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://songofsoil.vercel.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.songofsoil.com'),
   title: "SongOfSoil — Nature's rhythm, grown with care",
   description: "A forest-farm near Kanha National Park practicing regenerative, diverse, and natural farming.",
   openGraph: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     images: ["/images/og.jpg"],
     locale: "en_IN",
     type: "website",
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://songofsoil.vercel.app',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.songofsoil.com',
   },
   twitter: {
     card: 'summary_large_image',
